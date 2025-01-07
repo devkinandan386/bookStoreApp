@@ -1,0 +1,89 @@
+[
+    {   "id":1, 
+        "name":"Story Book",
+        "title":"The Story Book",
+        "price":0,
+        "category":"Free",
+        "image":"https://img.freepik.com/free-photo/front-view-stacked-books-ladders-education-day_23-2149241046.jpg?t=st=1734768560~exp=1734772160~hmac=7a870fd5c8b2ed04ea12bf6893965b64fd4c5cb480d97567863af46ba629e03a&w=826"
+    }, 
+    
+    {   "id":2, 
+        "name":"Story Book",
+        "title":"The Story Book",
+        "price":0,
+        "category":"Free",
+        "image":"https://img.freepik.com/free-photo/front-view-stacked-books-ladders-education-day_23-2149241046.jpg?t=st=1734768560~exp=1734772160~hmac=7a870fd5c8b2ed04ea12bf6893965b64fd4c5cb480d97567863af46ba629e03a&w=826"
+    },
+
+    {   "id":3, 
+        "name":"Music Book",
+        "title":"The Music Book",
+        "price":100,
+        "category":"Free",
+        "image":"https://img.freepik.com/free-photo/front-view-stacked-books-ladders-education-day_23-2149241046.jpg?t=st=1734768560~exp=1734772160~hmac=7a870fd5c8b2ed04ea12bf6893965b64fd4c5cb480d97567863af46ba629e03a&w=826"
+    }, 
+
+    {   "id":4, 
+        "name":"Story Book",
+        "title":"The Story Book",
+        "price":0,
+        "category":"Free",
+        "image":"https://img.freepik.com/free-photo/front-view-stacked-books-ladders-education-day_23-2149241046.jpg?t=st=1734768560~exp=1734772160~hmac=7a870fd5c8b2ed04ea12bf6893965b64fd4c5cb480d97567863af46ba629e03a&w=826"
+    }, 
+
+    {   "id":5, 
+        "name":"Food Book",
+        "title":"The Food Book",
+        "price":200,
+        "category":"Food",
+        "image":"https://img.freepik.com/free-photo/front-view-stacked-books-ladders-education-day_23-2149241046.jpg?t=st=1734768560~exp=1734772160~hmac=7a870fd5c8b2ed04ea12bf6893965b64fd4c5cb480d97567863af46ba629e03a&w=826"
+    }, 
+    {   "id":6, 
+        "name":"Story Book",
+        "title":"The Story Book",
+        "price":0,
+        "category":"Free",
+        "image":"https://img.freepik.com/free-photo/front-view-stacked-books-ladders-education-day_23-2149241046.jpg?t=st=1734768560~exp=1734772160~hmac=7a870fd5c8b2ed04ea12bf6893965b64fd4c5cb480d97567863af46ba629e03a&w=826"
+    }, 
+    {   "id":7, 
+        "name":"Story Book",
+        "title":"The Story Book",
+        "price":0,
+        "category":"Free",
+        "image":"https://img.freepik.com/free-photo/front-view-stacked-books-ladders-education-day_23-2149241046.jpg?t=st=1734768560~exp=1734772160~hmac=7a870fd5c8b2ed04ea12bf6893965b64fd4c5cb480d97567863af46ba629e03a&w=826"
+    }, 
+
+    {   "id":8, 
+        "name":"Sports Books",
+        "title":"The Sports Book",
+        "price":50,
+        "category":"Sports",
+        "image":"https://img.freepik.com/free-photo/front-view-stacked-books-ladders-education-day_23-2149241046.jpg?t=st=1734768560~exp=1734772160~hmac=7a870fd5c8b2ed04ea12bf6893965b64fd4c5cb480d97567863af46ba629e03a&w=826"
+    }, 
+
+    {   "id":9, 
+        "name":"Story Book",
+        "title":"The Story Book",
+        "price":0,
+        "category":"Free",
+        "image":"https://img.freepik.com/free-photo/front-view-stacked-books-ladders-education-day_23-2149241046.jpg?t=st=1734768560~exp=1734772160~hmac=7a870fd5c8b2ed04ea12bf6893965b64fd4c5cb480d97567863af46ba629e03a&w=826"
+    }, 
+
+
+    {   "id":10, 
+        "name":"Comic Book",
+        "title":"The Story Book",
+        "price":20,
+        "category":"Entertainment",
+        "image":"https://img.freepik.com/free-photo/front-view-stacked-books-ladders-education-day_23-2149241046.jpg?t=st=1734768560~exp=1734772160~hmac=7a870fd5c8b2ed04ea12bf6893965b64fd4c5cb480d97567863af46ba629e03a&w=826"
+    }, 
+
+    {   "id":11, 
+        "name":"Story Book",
+        "title":"The Story Book",
+        "price":0,
+        "category":"Free",
+        "image":"https://img.freepik.com/free-photo/front-view-stacked-books-ladders-education-day_23-2149241046.jpg?t=st=1734768560~exp=1734772160~hmac=7a870fd5c8b2ed04ea12bf6893965b64fd4c5cb480d97567863af46ba629e03a&w=826"
+    }
+
+]

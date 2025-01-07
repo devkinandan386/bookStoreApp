@@ -1,0 +1,124 @@
+[
+    {
+        "id": 1,
+        "title": "C",
+        "description": "Understand the basics of procedural programming.",
+        "image": "https://img.freepik.com/premium-photo/letter-c-cyberpunk-light-colors_756748-20849.jpg?ga=GA1.1.823721598.1708099883&semt=ais_hybrid"
+
+    },
+    {
+        "id": 2,
+        "title": "C++",
+        "description": "Learn object-oriented programming concepts.",
+        "image": "https://img.freepik.com/premium-photo/concept-popular-programming-language-c-plus-plus_102583-4817.jpg?ga=GA1.1.823721598.1708099883&semt=ais_hybrid"
+    },
+    {
+        "id": 3,
+        "title": "Java",
+        "description": "Develop applications with platform independence.",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5CXHsDmdg_hNZO7atth29UtAkqEoVgGuFrg&s"
+    },
+    {
+        "id": 4,
+        "title": "Python",
+        "description": "Dive into Python for data analysis and automation.",
+        "image": "https://img.freepik.com/premium-photo/python-programming-language-word-concept-qa-concept_198568-89.jpg?ga=GA1.1.823721598.1708099883&semt=ais_hybrid"
+    },
+    {
+        "id": 5,
+        "title": "Database Management Systems",
+        "description": "Learn SQL and database design principles.",
+        "image": "https://img.freepik.com/free-vector/database-storage-flat-isometric_126523-1925.jpg?ga=GA1.1.823721598.1708099883&semt=ais_hybrid"
+    },
+    {
+        "id": 6,
+        "title": "Computer Networks",
+        "description": "Understand the layers and protocols of networking.",
+        "image": "https://img.freepik.com/free-photo/3d-view-personal-computer-with-vegetation_23-2150714193.jpg?ga=GA1.1.823721598.1708099883&semt=ais_hybrid"
+    },
+    {
+        "id": 7,
+        "title": "Software Engineering",
+        "description": "Explore SDLC and Agile methodologies.",
+        "image": "https://img.freepik.com/free-photo/still-life-books-versus-technology_23-2150062975.jpg?ga=GA1.1.823721598.1708099883&semt=ais_hybrid"
+    },
+    {
+        "id": 8,
+        "title": "Web Technologies",
+        "description": "Learn HTML, CSS, JavaScript, and frameworks.",
+        "image": "https://img.freepik.com/free-vector/programmers-concept-with-flat-design_23-2147852753.jpg?t=st=1735122076~exp=1735125676~hmac=9bb149c8cda245b2d9ca94656041c50e712fe3e6e7ea45ea10545f5d003c968f&w=740"
+    },
+    {
+        "id": 9,
+        "title": "Operating Systems",
+        "description": "Understand memory, process, and file management.",
+        "image": "https://img.freepik.com/free-photo/programming-code-abstract-technology-background-software-developer-computer-script_53876-120293.jpg"
+    },
+    {
+        "id": 10,
+        "title": "Data Structures and Algorithms",
+        "description": "Learn how to organize and process data efficiently.",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2aiNJBF2ZeaBzkbC2UXznfcY7VXf63zKKBw&s"
+    },
+    {
+        "id": 11,
+        "title": "Design and Analysis of Algorithms",
+        "description": "Master algorithmic thinking and optimization.",
+        "image": "https://img.freepik.com/free-photo/technology-computer-laptop-notebook-concept_53876-125071.jpg"
+    },
+    {
+        "id": 12,
+        "title": "Fundamentals of Information Technology",
+        "description": "Get an introduction to the field of IT.",
+        "image": "https://img.freepik.com/free-vector/distance-it-courses-self-education-learning-programming-information-technology-study-female-student-covering-online-computer-science-course_335657-2543.jpg?ga=GA1.1.823721598.1708099883&semt=ais_hybrid"
+    },
+    {
+        "id": 13,
+        "title": "Cloud Computing",
+        "description": "Explore virtualization and cloud platforms.",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTD0m0zsR-YHBHvVOUtDHGOrfZGbD-nNcr5JA&s"
+    },
+    {
+        "id": 14,
+        "title": "JavaScript",
+        "description": "Master the language of the web for dynamic applications.",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqs3g9ZcS51X7oYG0iTo4mER9QiCoL3OVtPw&s"
+    },
+    {
+        "id": 15,
+        "title": "Digital Marketing",
+        "description": "Learn to promote businesses online.",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5BHo7QuZx6jkF3nfvnmoulHCAiJ2mmF_Ipw&s"
+    },
+    {
+        "id": 16,
+        "title": "Computer Organization and Architecture",
+        "description": "Understand the inner workings of a computer.",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9BnXfkXysMv0AWV5Gc6RJRVRKUAZthSDJ5Q&s"
+    },
+    {
+        "id": 17,
+        "title": "Machine Learning",
+        "description": "Learn to build intelligent systems that learn from data.",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzpc6FsRLORq6yZXzeQhBDQTfIjilgZ0TVdQ&s"
+    },
+    {
+        "id": 18,
+        "title": "SQL",
+        "description": "Master the language of data management.",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSynh1_IhVflkfBaLN7Kv96dkyb8C_gSmWHcA&s",
+        "pdfLink": "https://drive.google.com/file/d/1ZyqeU1SmtBiu3-V7_suF8ZioMiuOtmU1/view?usp=drive_link "
+    },
+    {
+        "id": 19,
+        "title": "React JS",
+        "description": "Build interactive user interfaces with React.",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCC9_6KRksCMwzY7bUmgC2YzbhcvhmyL9L8g&s"
+    },
+    {        
+        "id": 20,        
+        "title": "Node JS",        
+        "description": "Build server-side applications with Node.js.",        
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6jQpkQpGBvzulLpQk10vCbnt16ObGCj0p3g&s"    
+    }
+]
