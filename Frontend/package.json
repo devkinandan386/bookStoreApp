@@ -31,7 +31,6 @@
     "react-router-dom": "^6.28.0",
     "react-slick": "^0.30.3",
     "react-speech-recognition": "^3.10.0",
-    "react-hook-speech-to-text": "^1.0.7",
     "slick-carousel": "^1.8.1",
     "sweetalert2": "^11.6.13",
     "tailwind-merge": "^3.0.1",
