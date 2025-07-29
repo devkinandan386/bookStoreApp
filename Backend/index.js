@@ -44,6 +44,10 @@ app.use("/user", userRoute);
 app.use("/video", videoRoute);
 app.use("/interview", interviewRoute);
 
+// Root route
+app.get("/", (req, res) => {
+  res.send("✅ Bookstore backend is running!");
+});
 // Start server
 app.listen(PORT, () => {
   console.log(`🚀 Server is listening on port ${PORT}`);
