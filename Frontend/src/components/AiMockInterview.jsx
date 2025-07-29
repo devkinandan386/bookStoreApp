@@ -31,7 +31,7 @@ const InterviewLayout = () => {
     if (questions.length === 1) {
       const fetchQuestions = async () => {
         try {
-          const response = await axios.get('http://localhost:4001/interview/questions');
+          const response = await axios.get('https://bookstoreapp-backend-f2em.onrender.com');
           const remainingQuestions = response.data.sort(() => Math.random() - 0.5).slice(0, 19);
           const allQuestions = [firstQuestion, ...remainingQuestions];
           setQuestions(allQuestions);
@@ -103,7 +103,7 @@ const InterviewLayout = () => {
       formData.append('userId', '123'); // Replace with actual user ID
       formData.append('questionId', questions[currentQuestionIndex]._id); // Replace with actual question ID
 
-      axios.post('http://localhost:4001/interview/response', formData, {
+      axios.post('https://bookstoreapp-backend-f2em.onrender.com', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
@@ -161,7 +161,7 @@ const InterviewLayout = () => {
 
   const fetchSubmittedResponses = async () => {
     try {
-      const response = await axios.get('http://localhost:4001/interview/responses?userId=123'); // Replace with actual user ID
+      const response = await axios.get('https://bookstoreapp-backend-f2em.onrender.com'); // Replace with actual user ID
       setSubmittedResponses(response.data);
     } catch (error) {
       console.error('Error fetching submitted responses:', error);
@@ -170,7 +170,7 @@ const InterviewLayout = () => {
 
   const fetchFeedback = async () => {
     try {
-      const response = await axios.get('http://localhost:4001/interview/feedback?userId=123');
+      const response = await axios.get('https://bookstoreapp-backend-f2em.onrender.com');
       setFeedback(response.data);
     } catch (error) {
       console.error('Error fetching feedback:', error);
@@ -178,7 +178,7 @@ const InterviewLayout = () => {
   };
 
   const playVideo = (videoPath) => {
-    setSelectedVideo(`http://localhost:4001/${videoPath}`); // Ensure the correct path to the video
+    setSelectedVideo(`https://bookstoreapp-backend-f2em.onrender.com/${videoPath}`); // Ensure the correct path to the video
   };
 
   const resetRecordingState = () => {
