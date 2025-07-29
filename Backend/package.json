@@ -5,14 +5,15 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon index.js"
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/devkinandan386/BookStore.git"
   },
-  "author": "Devkinandan Pandey",
+  "author": "DEVKI NANDAN PANDEY",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/devkinandan386/BookStore/issues"
