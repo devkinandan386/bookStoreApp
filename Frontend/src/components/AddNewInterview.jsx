@@ -54,16 +54,7 @@ const handleSubmit = async (e) => {
 
     console.log("Response from API:", parsedResponse);
 
-    // 🔁 Convert parsedResponse to JSON blob and prepare FormData
-    const formData = new FormData();
-    const blob = new Blob([JSON.stringify(parsedResponse)], { type: "application/json" });
-
-    formData.append("jsonMockResp", blob);
-    formData.append("jobPosition", jobRole);
-    formData.append("jobDesc", jobDescription);
-    formData.append("jobExperience", yearsExperience);
-    formData.append("createdBy", "testuser@example.com");
-
+    
     const saveInterview = await fetch(`${import.meta.env.VITE_BACKEND_URL}/mockinterview/save`, {
      method: "POST",
      headers: { "Content-Type": "application/json" },
