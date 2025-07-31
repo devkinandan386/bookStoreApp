@@ -133,16 +133,19 @@ function RecordAnswerSection({ totalQuestions, interviewId, unlockNextQuestion }
   };
 
   const handleFinalSubmit = () => {
+  const feedbackData = questions.map((question, index) => ({
+    question: question.questionText,          // actual AI question from DB
+    answer: userAnswers[index],               // user's response
+    feedback: question.feedback || "No suggestion available", // AI suggestion (individual)
+  }));
+
   navigate("/feedback", {
     state: {
-      feedback: userAnswers.map((answer, index) => ({
-        question: `Question ${index + 1}`,
-        answer: answer,
-        feedback: feedback,
-      })),
+      feedback: feedbackData,
     },
   });
 };
+
 
   return (
     <div className="flex flex-col items-center justify-center w-full">
