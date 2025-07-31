@@ -1,7 +1,7 @@
 // // routes/MockInterviewRoutes.js
 
 // import express from 'express';
-// import { saveMockInterview } from '../controller/MockInterviewController.js';
+// import { saveMockInterview } from '../controller/MockinterviewController.js';
 
 // const router = express.Router();
 
@@ -11,7 +11,7 @@
 // export default router;
 
 import express from 'express';
-import { saveMockInterview, getMockInterview } from '../controller/MockInterviewController.js'; // Ensure the controller is imported
+import { saveMockInterview, getMockInterview } from '../controller/MockinterviewController.js'; // Ensure the controller is imported
 
 const router = express.Router();
 
