@@ -1,3 +1,5 @@
+import 'regenerator-runtime/runtime'; // ✅ Add this FIRST to fix regeneratorRuntime error
+
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
