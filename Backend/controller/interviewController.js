@@ -31,6 +31,9 @@ export const getQuestions = async (req, res) => {
 
 export const saveResponse = async (req, res) => {
   try {
+    console.log("📩 Request body:", req.body);
+    console.log("📦 Uploaded file:", req.file);
+
     const { userId, questionId } = req.body;
 
     const responseData = {
@@ -40,6 +43,8 @@ export const saveResponse = async (req, res) => {
 
     if (req.file) {
       responseData.videoPath = req.file.path;
+    } else {
+      console.warn("⚠️ No file uploaded.");
     }
 
     const newResponse = new Response(responseData);
