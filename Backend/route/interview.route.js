@@ -23,6 +23,6 @@ const upload = multer({ dest: 'uploads/' }); // Ensure this path exists
 
 router.get("/", getQuestions);
 router.get("/questions", getQuestions);
-router.post("/response", upload.single('video'), saveResponse);
+router.post("/response", saveResponse); // Temporarily skip multer
 
 export default router;
