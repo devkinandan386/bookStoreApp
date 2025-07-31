@@ -1,17 +1,14 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 
 const InterviewLayout = () => {
-  // ... your existing state & effects for questions, timer, etc.
-
   const [submittedResponses, setSubmittedResponses] = useState([]);
 
-  // Fetch submitted responses when the page loads.
   useEffect(() => {
     const fetchSubmittedResponses = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:4001/interview/responses?userId=123" // adjust userId accordingly
+          "https://bookstoreapp-backend-f2em.onrender.com/interview/user-responses?userId=123"
         );
         setSubmittedResponses(response.data);
       } catch (error) {
@@ -22,16 +19,11 @@ const InterviewLayout = () => {
   }, []);
 
   const playVideo = (videoPath) => {
-    // If you have video answers, you can play them here.
-    // For text answers, you might not need this function.
-    window.open(`http://localhost:4001/${videoPath}`, "_blank");
+    window.open(`https://bookstoreapp-backend-f2em.onrender.com/${videoPath}`, "_blank");
   };
 
   return (
     <div style={styles.container}>
-      {/* ... Your existing interview questions and recording sections */}
-
-      {/* Submitted Responses Section */}
       {submittedResponses.length > 0 && (
         <div style={styles.responsesSection}>
           <h2 style={styles.header}>Your Submitted Responses</h2>
