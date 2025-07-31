@@ -31,18 +31,16 @@ export const getQuestions = async (req, res) => {
 
 export const saveResponse = async (req, res) => {
   try {
-    console.log("📩 Request body:", req.body);
-    console.log("📦 Uploaded file:", req.file);
-
     const { userId, questionId } = req.body;
 
-    const responseData = {
-      userId,
-      questionId,
-    };
+    if (!userId || !questionId) {
+      return res.status(400).json({ message: "Missing required fields." });
+    }
+
+    const responseData = { userId, questionId };
 
     if (req.file) {
-      responseData.videoPath = req.file.path;
+      responseData.videoPath = req.file.path.replace(/\\/g, "/"); // Normalize slashes
     } else {
       console.warn("⚠️ No file uploaded.");
     }
@@ -53,7 +51,6 @@ export const saveResponse = async (req, res) => {
     res.status(201).json({ message: "Response saved successfully!" });
   } catch (error) {
     console.error("🔥 Error in saveResponse:", error.message);
-    console.error("📄 Stack trace:", error.stack);
     res.status(500).json({ message: "Internal server error" });
   }
 };
