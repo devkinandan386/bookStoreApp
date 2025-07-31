@@ -13,7 +13,7 @@ function StartInterview() {
   useEffect(() => {
     const fetchQuestions = async () => {
       try {
-        const response = await fetch(`http://localhost:4001/mockinterview/${interviewId}`);
+        const response = await fetch(`https://bookstoreapp-backend-f2em.onrender.com/interview/mockinterview/${interviewId}`);
 
         const contentType = response.headers.get("content-type");
         if (!contentType || !contentType.includes("application/json")) {
