@@ -64,9 +64,16 @@ const handleSubmit = async (e) => {
     formData.append("jobExperience", yearsExperience);
     formData.append("createdBy", "testuser@example.com");
 
-    const saveInterview = await fetch(`${import.meta.env.VITE_BACKEND_URL}/interview/save`, {
-      method: "POST",
-      body: formData,
+    const saveInterview = await fetch(`${import.meta.env.VITE_BACKEND_URL}/mockinterview/save`, {
+     method: "POST",
+     headers: { "Content-Type": "application/json" },
+     body: JSON.stringify({
+       jsonMockResp: parsedResponse,
+       jobPosition: jobRole,
+       jobDesc: jobDescription,
+       jobExperience: yearsExperience,
+       createdBy: "testuser@example.com",
+        }),
     });
 
     if (!saveInterview.ok) {
