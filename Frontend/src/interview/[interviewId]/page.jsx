@@ -22,16 +22,16 @@ function InterviewPage() {
     }
 
     // ✅ Fetch from backend API (hosted on Render)
-    fetch(`https://bookstoreapp-backend-f2em.onrender.com/mockinterview/${interviewId}`)
-      .then((res) => {
-        if (!res.ok) throw new Error("Interview not found");
-        return res.json();
-      })
-      .then((data) => {
-        console.log("Fetched interview data:", data);
-        setInterviewData(data);
-      })
-      .catch((err) => console.error("Error fetching interview data:", err));
+    // fetch(`https://bookstoreapp-backend-f2em.onrender.com/mockinterview/${interviewId}`)
+    //   .then((res) => {
+    //     if (!res.ok) throw new Error("Interview not found");
+    //     return res.json();
+    //   })
+    //   .then((data) => {
+    //     console.log("Fetched interview data:", data);
+    //     setInterviewData(data);
+    //   })
+    //   .catch((err) => console.error("Error fetching interview data:", err));
   }, [interviewId]);
 
   return (
