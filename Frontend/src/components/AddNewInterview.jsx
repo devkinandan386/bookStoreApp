@@ -15,82 +15,81 @@ function AddNewInterview() {
   const [snackSeverity, setSnackSeverity] = useState("success");
   const navigate = useNavigate(); // ✅ Initialize useNavigate for navigation
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+const handleSubmit = async (e) => {
+  e.preventDefault();
 
-    if (!jobRole || !jobDescription || !yearsExperience) {
-      setSnackMessage("Please fill in all fields before submitting.");
-      setSnackSeverity("error");
-      setSnackOpen(true);
-      return;
-    }
-
-    setLoading(true);
-    console.log("Form submitted:", jobRole, jobDescription, yearsExperience);
-
-    // ✅ Store interview details in localStorage
-    localStorage.setItem(
-      "interviewData",
-      JSON.stringify({
-        jobPosition: jobRole,
-        jobDescription,
-        jobExperience: yearsExperience,
-      })
-    );
-
-    const InputPrompt = `
-      Job Position: ${jobRole}  
-      Job Description: ${jobDescription}  
-      Years of Experience: ${yearsExperience}  
-      Based on this, generate 5 interview questions with answers in JSON format. 
-      Output format: [{"question": "...", "answer": "..."}]
-    `;
-
-    try {
-      const result = await chatSession.sendMessage(InputPrompt);
-      const rawResponse = await result.response.text();
-      const cleanedResponse = rawResponse.replace(/```json/g, "").replace(/```/g, "").trim();
-      const parsedResponse = JSON.parse(cleanedResponse);
-
-      console.log("Response from API:", parsedResponse);
-
-      // ✅ Send data to the backend and get the interviewId
-      const saveInterview = await fetch(`${import.meta.env.VITE_BACKEND_URL}/interview/response`,{
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-      jsonMockResp: parsedResponse,
-      jobPosition: jobRole,
-      jobDesc: jobDescription,
-      jobExperience: yearsExperience,
-      createdBy: "testuser@example.com",
-    }),
-  }
-);
-
-      if (!saveInterview.ok) {
-        throw new Error("Failed to save interview questions.");
-      }
-
-      const responseData = await saveInterview.json();
-      const interviewId = responseData._id; // ✅ Get the saved interview ID from the response
-
-      setSnackMessage("Interview questions saved successfully!");
-      setSnackSeverity("success");
-
-      // ✅ Navigate to the dynamic interview page inside `src/interview/[interviewId]/page.jsx`
-      navigate(`/interview/${interviewId}`);
-
-    } catch (error) {
-      console.error("Error:", error);
-      setSnackMessage("Failed to generate interview questions. Please try again.");
-      setSnackSeverity("error");
-    }
-
-    setLoading(false);
-    setOpenDialog(false);
+  if (!jobRole || !jobDescription || !yearsExperience) {
+    setSnackMessage("Please fill in all fields before submitting.");
+    setSnackSeverity("error");
     setSnackOpen(true);
-  };
+    return;
+  }
+
+  setLoading(true);
+  console.log("Form submitted:", jobRole, jobDescription, yearsExperience);
+
+  // Save interview data locally
+  localStorage.setItem(
+    "interviewData",
+    JSON.stringify({
+      jobPosition: jobRole,
+      jobDescription,
+      jobExperience: yearsExperience,
+    })
+  );
+
+  const InputPrompt = `
+    Job Position: ${jobRole}  
+    Job Description: ${jobDescription}  
+    Years of Experience: ${yearsExperience}  
+    Based on this, generate 5 interview questions with answers in JSON format. 
+    Output format: [{"question": "...", "answer": "..."}]
+  `;
+
+  try {
+    const result = await chatSession.sendMessage(InputPrompt);
+    const rawResponse = await result.response.text();
+    const cleanedResponse = rawResponse.replace(/```json/g, "").replace(/```/g, "").trim();
+    const parsedResponse = JSON.parse(cleanedResponse);
+
+    console.log("Response from API:", parsedResponse);
+
+    // 🔁 Convert parsedResponse to JSON blob and prepare FormData
+    const formData = new FormData();
+    const blob = new Blob([JSON.stringify(parsedResponse)], { type: "application/json" });
+
+    formData.append("jsonMockResp", blob);
+    formData.append("jobPosition", jobRole);
+    formData.append("jobDesc", jobDescription);
+    formData.append("jobExperience", yearsExperience);
+    formData.append("createdBy", "testuser@example.com");
+
+    const saveInterview = await fetch(`${import.meta.env.VITE_BACKEND_URL}/interview/response`, {
+      method: "POST",
+      body: formData,
+    });
+
+    if (!saveInterview.ok) {
+      throw new Error("Failed to save interview questions.");
+    }
+
+    const responseData = await saveInterview.json();
+    const interviewId = responseData._id;
+
+    setSnackMessage("Interview questions saved successfully!");
+    setSnackSeverity("success");
+
+    navigate(`/interview/${interviewId}`);
+  } catch (error) {
+    console.error("Error:", error);
+    setSnackMessage("Failed to generate interview questions. Please try again.");
+    setSnackSeverity("error");
+  }
+
+  setLoading(false);
+  setOpenDialog(false);
+  setSnackOpen(true);
+};
 
   return (
     <div className="p-10">
