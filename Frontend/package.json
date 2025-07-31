@@ -35,7 +35,8 @@
     "slick-carousel": "^1.8.1",
     "sweetalert2": "^11.6.13",
     "tailwind-merge": "^3.0.1",
-    "tailwindcss-animate": "^1.0.7"
+    "tailwindcss-animate": "^1.0.7",
+    **"regenerator-runtime": "^0.14.0"**
   },
   "devDependencies": {
     "@types/react": "^18.2.64",
