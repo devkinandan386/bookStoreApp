@@ -133,24 +133,16 @@ function RecordAnswerSection({ totalQuestions, interviewId, unlockNextQuestion }
   };
 
   const handleFinalSubmit = () => {
-  if (!questions || questions.length === 0) {
-    console.error("Questions not available!");
-    return;
-  }
-
-  const feedbackData = questions.map((question, index) => ({
-    question: question.questionText || `Question ${index + 1}`,
-    answer: userAnswers[index] || "No answer provided",
-    feedback: question.feedback || "No suggestion available",
-  }));
-
   navigate("/feedback", {
     state: {
-      feedback: feedbackData,
+      feedback: userAnswers.map((answer, index) => ({
+        question: `Question ${index + 1}`,
+        answer: answer,
+        feedback: feedback,
+      })),
     },
   });
 };
-
 
 
   return (
