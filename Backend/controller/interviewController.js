@@ -32,24 +32,23 @@ export const getQuestions = async (req, res) => {
 export const saveResponse = async (req, res) => {
   try {
     const { userId, questionId } = req.body;
-    const videoFile = req.file;
 
-    // Check if file is present
-    if (!videoFile) {
-      return res.status(400).json({ message: "No video file uploaded" });
-    }
-
-    const newResponse = new Response({
+    const responseData = {
       userId,
       questionId,
-      videoPath: videoFile.path, // Save the path of the uploaded video
-    });
+    };
 
+    if (req.file) {
+      responseData.videoPath = req.file.path;
+    }
+
+    const newResponse = new Response(responseData);
     await newResponse.save();
 
     res.status(201).json({ message: "Response saved successfully!" });
   } catch (error) {
-    console.log("Error: ", error);
+    console.error("🔥 Error in saveResponse:", error.message);
+    console.error("📄 Stack trace:", error.stack);
     res.status(500).json({ message: "Internal server error" });
   }
 };
