@@ -320,7 +320,7 @@
 // export default RecordAnswerSection;
 
 import React, { useEffect, useState } from "react";
-import useSpeechToText from "react-hook-speech-to-text";
+import SpeechRecognition, { useSpeechRecognition } from 'react-speech-recognition';
 import Webcam from "react-webcam";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -347,7 +347,7 @@ function RecordAnswerSection({ totalQuestions, interviewId, unlockNextQuestion }
     results,
     startSpeechToText,
     stopSpeechToText,
-  } = useSpeechToText({
+  } = useSpeechRecognition({
     continuous: true,
     useLegacyResults: false,
   });
