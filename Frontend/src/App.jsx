@@ -8,7 +8,7 @@ import Signup from "./components/Signup";
 import Notes from "./components/Notes";
 import Other from "./components/Other";
 import InterviewQuestions from "./components/InterviewQuestions";
-//import PreviousYearPapers from "./components/PreviousYearPapers";
+import PreviousYearPapers from "./components/PreviousYearPapers";
 import AddNewInterview from "./components/AddNewInterview"; // Import it
 import RecordAnswerSection from "./components/RecordAnswerSection";
 import VideoSupport from "./components/VideoSupport";
