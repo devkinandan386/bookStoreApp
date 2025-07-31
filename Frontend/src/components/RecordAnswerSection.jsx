@@ -133,15 +133,16 @@ function RecordAnswerSection({ totalQuestions, interviewId, unlockNextQuestion }
   };
 
   const handleFinalSubmit = () => {
-    navigate("/feedback", {
+  navigate("/feedback", {
     state: {
-    feedback: interviewAnswers.map((item) => ({
-      question: item.questionText,
-      answer: item.userAnswer,
-      feedback: item.feedback,
-    })),
-  },
-});
+      feedback: userAnswers.map((answer, index) => ({
+        question: `Question ${index + 1}`,
+        answer: answer,
+        feedback: feedback,
+      })),
+    },
+  });
+};
 
   return (
     <div className="flex flex-col items-center justify-center w-full">
