@@ -57,7 +57,7 @@ export const saveMockInterview = async (req, res) => {
       jobDesc,
       jobExperience,
       createdBy,
-      createdAt: moment().format('YYYY-MM-DD'),
+      createdAt: new Date().toISOString().split('T')[0],
     });
 
     // Save the document to MongoDB
