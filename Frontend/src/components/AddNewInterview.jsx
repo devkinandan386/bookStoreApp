@@ -55,17 +55,18 @@ function AddNewInterview() {
       console.log("Response from API:", parsedResponse);
 
       // ✅ Send data to the backend and get the interviewId
-      const saveInterview = await fetch("https://bookstoreapp-backend-f2em.onrender.com/mockinterview/save", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          jsonMockResp: parsedResponse,
-          jobPosition: jobRole,
-          jobDesc: jobDescription,
-          jobExperience: yearsExperience,
-          createdBy: "testuser@example.com",
-        }),
-      });
+      const saveInterview = await fetch(`${import.meta.env.VITE_BACKEND_URL}/mockinterview/save`,{
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+      jsonMockResp: parsedResponse,
+      jobPosition: jobRole,
+      jobDesc: jobDescription,
+      jobExperience: yearsExperience,
+      createdBy: "testuser@example.com",
+    }),
+  }
+);
 
       if (!saveInterview.ok) {
         throw new Error("Failed to save interview questions.");
