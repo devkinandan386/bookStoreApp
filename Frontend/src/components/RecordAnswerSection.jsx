@@ -134,12 +134,14 @@ function RecordAnswerSection({ totalQuestions, interviewId, unlockNextQuestion }
 
   const handleFinalSubmit = () => {
     navigate("/feedback", {
-      state: {
-        feedback,
-        rating,
-      },
-    });
-  };
+    state: {
+    feedback: interviewAnswers.map((item) => ({
+      question: item.questionText,
+      answer: item.userAnswer,
+      feedback: item.feedback,
+    })),
+  },
+});
 
   return (
     <div className="flex flex-col items-center justify-center w-full">
