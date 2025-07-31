@@ -42,6 +42,9 @@ import interviewRoute from './route/interview.route.js';
 import mockInterviewRoutes from './route/MockinterviewRoutes.js';
 import answerRoutes from './route/answerRoutes.js';
 
+import interviewRoute from './route/interview.route.js';
+app.use('/interview', interviewRoute);
+
 app.use('/book', bookRoute);
 app.use('/user', userRoute);
 app.use('/video', videoRoute);
