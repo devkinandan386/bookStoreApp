@@ -55,7 +55,7 @@ function AddNewInterview() {
       console.log("Response from API:", parsedResponse);
 
       // ✅ Send data to the backend and get the interviewId
-      const saveInterview = await fetch("http://localhost:4001/mockinterview/save", {
+      const saveInterview = await fetch("https://bookstoreapp-backend-f2em.onrender.com/mockinterview/save", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
