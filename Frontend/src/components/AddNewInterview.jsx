@@ -55,7 +55,7 @@ function AddNewInterview() {
       console.log("Response from API:", parsedResponse);
 
       // ✅ Send data to the backend and get the interviewId
-      const saveInterview = await fetch(`${import.meta.env.VITE_BACKEND_URL}/mockinterview/save`,{
+      const saveInterview = await fetch(`${import.meta.env.VITE_BACKEND_URL}/mockinterview/response`,{
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
