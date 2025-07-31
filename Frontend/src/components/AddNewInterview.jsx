@@ -64,7 +64,7 @@ const handleSubmit = async (e) => {
     formData.append("jobExperience", yearsExperience);
     formData.append("createdBy", "testuser@example.com");
 
-    const saveInterview = await fetch(`${import.meta.env.VITE_BACKEND_URL}/interview/response`, {
+    const saveInterview = await fetch(`${import.meta.env.VITE_BACKEND_URL}/interview/save`, {
       method: "POST",
       body: formData,
     });
